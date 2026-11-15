@@ -1,0 +1,74 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "sharky",
+  "title": "Sharky",
+  "description": "Search URL stickies saved in the Sharky macOS app.",
+  "icon": "app-icon.png",
+  "author": "sachindabas",
+  "platforms": ["macOS"],
+  "categories": ["Productivity", "Web"],
+  "license": "MIT",
+  "commands": [
+    {
+      "name": "search-notes",
+      "title": "Search Notes",
+      "subtitle": "Sharky",
+      "description": "Search stickies from Sharky by note text, page title, or URL. Assign a global hotkey in Raycast Settings → Shortcuts.",
+      "mode": "view",
+      "keywords": [
+        "sharky",
+        "stickies",
+        "notes",
+        "search",
+        "find",
+        "urls",
+        "pages",
+        "bookmarks"
+      ],
+      "arguments": [
+        {
+          "name": "query",
+          "placeholder": "Search query",
+          "type": "text",
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "browse-types",
+      "title": "Browse Types",
+      "subtitle": "Sharky",
+      "description": "Browse Sharky types (categories) and search notes within each type.",
+      "mode": "view",
+      "keywords": [
+        "sharky",
+        "types",
+        "categories",
+        "tags",
+        "folders",
+        "stickies",
+        "notes"
+      ]
+    }
+  ],
+  "dependencies": {
+    "@raycast/api": "^1.103.6",
+    "@raycast/utils": "^1.19.1"
+  },
+  "devDependencies": {
+    "@raycast/eslint-config": "^2.0.4",
+    "@types/node": "22.13.10",
+    "@types/react": "19.0.10",
+    "eslint": "^9.22.0",
+    "prettier": "^3.5.3",
+    "typescript": "^5.8.2"
+  },
+  "scripts": {
+    "build": "ray build -e dist",
+    "dev": "ray develop",
+    "fix-lint": "ray lint --fix",
+    "lint": "ray lint",
+    "test": "node test/search-fixtures.mjs",
+    "publish": "npx @raycast/api@latest publish"
+  }
+}
