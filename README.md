@@ -32,6 +32,13 @@ The extension reads Sharky’s SQLite database (read-only):
 
 It reloads when that file changes while the command is open. It does not write to the database.
 
+## Publishing
+
+| Repo | What goes there |
+| --- | --- |
+| [sharky-raycast](https://github.com/sachin-dabas/sharky-raycast) (this repo) | Raycast extension source — push here, then `npm run publish` for the Raycast Store |
+| [sharky-releases](https://github.com/sachin-dabas/sharky-releases) | Signed **app** builds and the in-app updater manifest only (`npm run release` from the Sharky app repo) |
+
 ## Develop
 
 ```bash
@@ -43,4 +50,10 @@ Run tests:
 
 ```bash
 npm test
+```
+
+Publish to the Raycast Store (from a clean checkout of this repo):
+
+```bash
+npm run publish
 ```
